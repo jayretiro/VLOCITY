@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VLOCITY Programming Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<script src="plan.js" type="text/javascript"></script>
+    
+	<link rel="stylesheet" href="jquery-ui.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/dataTables.jqueryui.min.css">
+	
+
+
+	<style>
+		table, th, td {
+		  border: 1px solid black;
+		  border-collapse: collapse;
+		}
+		th, td {
+		  padding: 15px;
+		  text-align: left;
+		}
+		table#t01 {
+		  width: 100%;    
+		  background-color: #f1f1c1;
+		}
+	</style>
+</head>
+<body>
+
+  Plan:<br>
+  <input type="text" id="planname"><br>
+  Task:<br>
+  <input type="text" id="taskname"><br>
+  Start Date:<br>
+  <input type="text" id="startdate" class='datePicker' ><br>
+  End Date:<br>
+  <input type="text" id="enddate" class='datePicker'><br><br>
+  <input type="button" id="btnsave" value="Save">
+
+  <br/>
+<table id="example" class="display" style="width:100%;margin-top: 25px; margin-bottom: 25px;">
+        <thead>
+            <tr>
+                <th>Plan</th>
+                <th>Task</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Plan</th>
+                <th>Task</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+            </tr>
+        </tfoot>
+    </table>
+	
+<div>
+This is my data (this should hidden but for exam purposes, this is being shown) <br/>
+<textarea rows="25" cols="150" id='stDB'>
+
+</textarea>
+
+</div>
+
+
+<script type="text/javascript">
+		$(document).ready(function() {
+			vlocity.init();
+		});
+
+	</script>
+	
+</body>
+</html>
